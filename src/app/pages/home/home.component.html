@@ -1,0 +1,51 @@
+<div class="main">
+    <div class="video">
+        <video src="../../../assets/Question Mark - 72720.mp4"
+                oncanplay="this.play()"
+                onloadedmetadata="this.muted=true"
+                muted
+                autoplay
+                loop
+        ></video>
+    </div>
+
+    <div class="menu" *ngIf="!(expression || rules )">
+        <div class="title">
+            <h1 class="animate__animated animate__flipInX animate_slower">Memory game</h1>
+        </div>
+        <div class="buttons">
+            <button 
+                class="button animate__animated animate__fadeInDown animate_slower animate__delay-1s"
+                (click)="startGame()"
+                >Start game
+            </button>
+            <button 
+                class="button animate__animated animate__fadeInDown animate_slower animate__delay-1s"
+                (click)="viewRules()"
+                >Rules
+            </button>
+        </div>
+    </div>
+
+    <div class="container game animate__animated animate__fadeInDown animate_slower "  *ngIf="expression">
+        <app-game (reset)="reset($event)" ></app-game>
+    </div>
+
+    <div class="rules animate__animated animate__fadeInDown animate_slower" *ngIf="rules">
+        <div class="box">
+            <div class="text">
+                <h1> Rules </h1>
+                <h4>
+                    its a very simple game...
+                </h4>
+                <p>
+                    The objetive is collect the most pair of cards in the less time as possible.
+                    Click the cards to flip them over, if the pair matches they'll stay that way, if not they'll flip back.
+                    You can see your times on the rank section and try to beat your on record !!! ;)
+                </p>
+                <button class="button" (click)="backMenu()" >Back to menu</button>
+            </div>
+        </div>
+    </div>
+
+</div>

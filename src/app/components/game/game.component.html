@@ -1,0 +1,38 @@
+<div class="game">
+    <div class="container" >
+        <div class="row">
+            <div class="col-xl-9  col-md-12">
+                <div class="display">
+                    
+                    <div class="card" (click)="flipCard(i,card)" *ngFor="let card of cards ; index as i" >
+                        <i [ngClass]="animationFlip" class="{{hiddenCard[i]}} animate__animated "></i>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-12">
+                <div class="options">
+                    <div class="timer">
+                        <p>{{time }} Sec</p>
+                    </div>
+                    <div class="gameoptions">
+                        <button class="button" (click)="viewRanks()">Ranking Personal</button>
+                        <button class="button" (click)="backMenu()" >Back to menu</button>
+                        <button class="button" (click)="resetGame()" >Reset Game</button>
+                    </div>
+                    <div class="finish" *ngIf="finish">
+                        <h1>
+                            GAME FINISHED
+                        </h1>
+                    </div>
+                    <div  class="ranks animate__animated" [ngClass]="animationFade" *ngIf="ranks" >
+                        <p *ngFor="let time of ranksTimes ; index as i"> Time: {{ranksTimes[i]}}s - dd/mm/yy </p>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
