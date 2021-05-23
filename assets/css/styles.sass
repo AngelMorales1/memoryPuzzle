@@ -1,0 +1,201 @@
+*
+    padding: 0
+    margin: 0
+.video
+    max-height: 100vh
+    overflow: hidden
+
+.button
+    width: 20%
+    padding: 9px
+    border: 1px solid white
+    color: white
+    border-radius: 50px
+    font-family: 'Orbitron', cursive
+    font-size: 15px
+    background: rgba(0, 0, 0, .1)
+.button:hover
+    color: black
+    background: white
+
+// Menu
+.menu
+    width: 50%
+    position: absolute
+    top: 35%
+    left: 25%
+    .title
+        display: flex
+        justify-content: center
+        h1
+            font-family: 'Orbitron', cursive
+            font-weight: 900
+            font-size: 70px
+            color: white
+    .buttons
+        width: 100%
+        margin-top: 80px
+        display: flex
+        justify-content: space-evenly
+.game
+    position: absolute
+    top: 20px
+    left: 15%
+// Game
+.display
+    width: 700px
+    height: 800px
+    padding: 10px
+    background: black
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
+    grid-gap: 10px
+    margin: auto
+    margin-top: 10px
+    border-radius: 10px
+    .card
+        i
+            margin: auto
+            font-size: 50px
+            padding: 0
+.options
+    width: 214px
+    padding-top: 15px
+    .timer
+        margin-top: 20px
+        display: flex
+        justify-content: center
+        p
+            color: white
+            font-size: 30px
+            font-family: 'Orbitron', cursive
+    .gameoptions
+        margin-top: 20px
+        display: flex
+        flex-direction: column
+        button
+            margin-top: 10px
+            align-self: center
+            width: 100%
+    .ranks
+        margin-top: 40px
+        border: 3px solid white
+        border-radius: 10px
+        display: flex
+        justify-content: center
+        flex-direction: column
+        p
+            color: white
+            font-size: 14px
+            font-family: 'Orbitron', cursive
+            margin: auto
+            padding: 10px
+    .finish
+        h1
+            color: white
+            font-size: 30px
+            font-family: 'Orbitron', cursive
+            margin: 30px
+            padding: 10px
+        
+// Rules
+.rules
+    width: 50%
+    position: absolute
+    top: 30%
+    left: 25%
+    .box
+        border: 3px solid white
+        border-radius: 20px
+        padding: 30px
+        text-align: center
+        background-color: rgba(1, 1, 1,0.5 )
+        .text
+            
+            color: white
+            font-family: 'Orbitron', cursive
+            h1
+                margin: 15px
+            h2
+                align-self: self-start
+            p
+                margin: 40px
+                letter-spacing: 3px
+
+// Mediaqueries
+@media screen and ( max-width:1370px )
+    .game
+        position: absolute
+        top: 10px
+        left: 10%
+
+@media screen and ( max-width:1200px )
+    .game
+        position: absolute
+        top: 5px
+        left: 5%
+
+    .display
+        width: 600px
+        height: 600px
+        .card
+            i
+                margin: auto
+                font-size: 35px
+                padding: 0
+    .options
+        width: 70%
+        padding-top: 5px
+        margin: auto
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        .timer
+            width: 250px
+            margin: 30px
+        .gameoptions
+            margin: 30px
+        .ranks
+            width: 200px
+
+@media screen and ( max-width:1000px )
+    .options
+        width: 90%
+        padding-top: 5px
+        margin: auto
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        .timer
+            margin: 5px
+            width: 170px
+        .gameoptions
+            margin: 5px
+        .ranks
+            width: 190px
+
+@media screen and ( max-width:690px )
+    .game
+        position: absolute
+        left: 0%
+    .display
+        width: 330px
+        height: 330px
+        .card
+            i
+                margin: auto
+                font-size: 25px
+                padding: 0
+    .options
+        width: 100%
+        padding-top: 5px
+        display: flex
+        flex-direction: column
+        .timer
+            margin: auto
+        .gameoptions
+            margin: auto
+        .ranks
+            margin: auto
+            margin-top: 30px
