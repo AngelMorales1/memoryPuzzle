@@ -39,7 +39,7 @@ export class GameComponent implements OnInit {
     // shufle cards, reset hidden cards and the timer
     this.cards = this.cardsService.shuffleCards()
     this.hiddenCard = this.cardsService.hiddenCard
-    clearInterval( this.stopTimer)
+    clearInterval(this.stopTimer)
     this.time = 0
     this.finish = false
     this.ranks = false
