@@ -1,0 +1,311 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.video {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.button {
+  width: 20%;
+  padding: 9px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 50px;
+  font-family: 'Orbitron', cursive;
+  font-size: 15px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  color: black;
+  background: white;
+}
+
+.menu {
+  width: 50%;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+}
+
+.menu .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu .title h1 {
+  font-family: 'Orbitron', cursive;
+  font-weight: 900;
+  font-size: 70px;
+  color: white;
+}
+
+.menu .buttons {
+  width: 100%;
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.game {
+  position: absolute;
+  top: 20px;
+  left: 15%;
+}
+
+.display {
+  width: 700px;
+  height: 800px;
+  padding: 10px;
+  background: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.display .card i {
+  margin: auto;
+  font-size: 50px;
+  padding: 0;
+}
+
+.options {
+  width: 214px;
+  padding-top: 15px;
+}
+
+.options .timer {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.options .timer p {
+  color: white;
+  font-size: 30px;
+  font-family: 'Orbitron', cursive;
+}
+
+.options .gameoptions {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.options .gameoptions button {
+  margin-top: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+}
+
+.options .ranks {
+  margin-top: 40px;
+  border: 3px solid white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.options .ranks p {
+  color: white;
+  font-size: 14px;
+  font-family: 'Orbitron', cursive;
+  margin: auto;
+  padding: 10px;
+}
+
+.options .finish h1 {
+  color: white;
+  font-size: 30px;
+  font-family: 'Orbitron', cursive;
+  margin: 30px;
+  padding: 10px;
+}
+
+.rules {
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+.rules .box {
+  border: 3px solid white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(1, 1, 1, 0.5);
+}
+
+.rules .box .text {
+  color: white;
+  font-family: 'Orbitron', cursive;
+}
+
+.rules .box .text h1 {
+  margin: 15px;
+}
+
+.rules .box .text h2 {
+  -ms-flex-item-align: self-start;
+      -ms-grid-row-align: self-start;
+      align-self: self-start;
+}
+
+.rules .box .text p {
+  margin: 40px;
+  letter-spacing: 3px;
+}
+
+@media screen and (max-width: 1370px) {
+  .game {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .game {
+    position: absolute;
+    top: 5px;
+    left: 5%;
+  }
+  .display {
+    width: 600px;
+    height: 600px;
+  }
+  .display .card i {
+    margin: auto;
+    font-size: 35px;
+    padding: 0;
+  }
+  .options {
+    width: 70%;
+    padding-top: 5px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .options .timer {
+    width: 250px;
+    margin: 30px;
+  }
+  .options .gameoptions {
+    margin: 30px;
+  }
+  .options .ranks {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .options {
+    width: 90%;
+    padding-top: 5px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .options .timer {
+    margin: 5px;
+    width: 170px;
+  }
+  .options .gameoptions {
+    margin: 5px;
+  }
+  .options .ranks {
+    width: 190px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .game {
+    position: absolute;
+    left: 0%;
+  }
+  .display {
+    width: 330px;
+    height: 330px;
+  }
+  .display .card i {
+    margin: auto;
+    font-size: 25px;
+    padding: 0;
+  }
+  .options {
+    width: 100%;
+    padding-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .options .timer {
+    margin: auto;
+  }
+  .options .gameoptions {
+    margin: auto;
+  }
+  .options .ranks {
+    margin: auto;
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
